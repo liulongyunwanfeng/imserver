@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<MAX_ACTIVE>1000</MAX_ACTIVE>
+	<MAX_IDLE>100</MAX_IDLE>
+	<MIN_IDEL>20</MIN_IDEL>
+	<MAX_WAIT>1000</MAX_WAIT>
+	<TIME_BETWEEN_EVICTION_RUNS_MILLIS>30000</TIME_BETWEEN_EVICTION_RUNS_MILLIS>
+	<NUM_TEST_SPEREVICTION_RUN>10</NUM_TEST_SPEREVICTION_RUN>
+	<MINEVICTABLE_IDLE_TIME_MILLIS>60000</MINEVICTABLE_IDLE_TIME_MILLIS>
+	<TEST_ON_BORROW>true</TEST_ON_BORROW>
+	<TEST_ON_RETURN>true</TEST_ON_RETURN>
+	<TEST_WHILE_IDLE>true</TEST_WHILE_IDLE>
+	<!-- 服务器地址列表 -->
+	<servers>
+		<server ip="127.0.0.1" port="7000"></server>
+		<server ip="127.0.0.1" port="7001"></server>
+		<server ip="127.0.0.1" port="7002"></server>
+		<server ip="127.0.0.1" port="7003"></server>
+		<server ip="127.0.0.1" port="7004"></server>
+		<server ip="127.0.0.1" port="7005"></server>
+
+	</servers>
+</config>

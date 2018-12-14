@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dbconfig id="default" name="proxool数据库连接">
+   <dbname>imserverdb</dbname>
+   <dbtype>mysql</dbtype>
+   <connection-type>druid</connection-type>
+   <!--<driverClass>com.mysql.jdbc.Driver</driverClass>-->
+   <url>jdbc:mysql://localhost:59310/im?useUnicode=true&amp;autoReconnect=true&amp;characterEncoding=utf8</url>
+   <uid>imdev</uid>
+   <pwd>imdev123456</pwd>
+   <filters>stat</filters>
+   <maxactive>150</maxactive>
+   <initialsize>1</initialsize>
+   <!--<maxwait>60000</maxwait>-->
+   <minidle>15</minidle>
+   <timebetweenevictionrunsmillis>60000</timebetweenevictionrunsmillis>
+   <minevictableidletimemillis>300000</minevictableidletimemillis>
+   <validationquery>select 1</validationquery>
+   <testwhileidle>true</testwhileidle>
+   <testonborrow>true</testonborrow>
+   <testonreturn>true</testonreturn>
+   <poolpreparedstatements>true</poolpreparedstatements>
+   <!--设置事务隔离级别为read commited-->
+   <maxopenpreparedstatements>20</maxopenpreparedstatements>
+
+   <!--添加回收机制之后-->
+   <removeabandoned>true</removeabandoned>
+   <removeabandonedtimeout>300</removeabandonedtimeout>
+   <logabandoned>false</logabandoned>
+   <defaulttransactionisolation>2</defaulttransactionisolation>
+
+   <connectioninitsqls>set names utf8mb4</connectioninitsqls>
+</dbconfig>

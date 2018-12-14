@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/rabbit
+                http://www.springframework.org/schema/rabbit/spring-rabbit-1.0.xsd">
+
+
+    <!-- 连接服务配置 -->
+    <rabbit:connection-factory id="connectionFactory" host="127.0.0.1" username="guest" password="guest" port="5672" channel-cache-size="5" />
+    <rabbit:admin connection-factory="connectionFactory" />
+    <!-- queue 队列声明 -->
+    <rabbit:queue id="queueserver1ptpmsg" name="queueserver1ptpmsg" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue id="queuegroup" name="queuegroup" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue id="queueserver1resptext" name="queueserver1resptext" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue id="queueserver1offlinetext" name="queueserver1offlinetext" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue id="queueserver1revoketext" name="queueserver1revoketext" durable="true" auto-delete="false" exclusive="false" />
+
+
+
+    <!-- direct-exchange 交换机制声明 -->
+    <rabbit:direct-exchange id="directExchangeLp" name="directExchangeLp" >
+        <rabbit:bindings>
+            <rabbit:binding queue="queueserver1ptpmsg" key="server1ptpmsg"/>
+            <rabbit:binding queue="queuegroup" key="group"/>
+            <rabbit:binding queue="queueserver1resptext" key="server1resptext"/>
+            <rabbit:binding queue="queueserver1offlinetext" key="server1offlinetext"/>
+            <rabbit:binding queue="queueserver1revoketext" key="server1revoketext"/>
+        </rabbit:bindings>
+    </rabbit:direct-exchange>
+
+    <!-- spring amqpTemplate声明 -->
+    <rabbit:template id="amqpTemplate"  connection-factory="connectionFactory" exchange="directExchangeLp"/>
+
+    <!-- 消费者 -->
+    <bean id="messageListener" class="com.eplat.im.MessageListener" />
+    <bean id="groupmessageListener" class="com.eplat.im.GroupMessageListener" />
+    <bean id="responseTextListener" class="com.eplat.im.ResponseTextListener" />
+    <!--离线消息监听器-->
+    <bean id="offLineMessageListener" class="com.eplat.OffLineMessageListener" />
+    <!--消息撤回监听器-->
+    <bean id="revokeListener" class="com.eplat.im.RevokeListener" />
+
+
+
+    <rabbit:listener-container connection-factory="connectionFactory">
+        <rabbit:listener ref="messageListener" method="receiveMessage" queue-names="queueserver1ptpmsg" />
+        <rabbit:listener ref="groupmessageListener" method="receiveMessage" queue-names="queuegroup" />
+        <rabbit:listener ref="responseTextListener" method="receiveMessage" queue-names="queueserver1resptext" />
+        <rabbit:listener ref="offLineMessageListener" method="receiveMessage" queue-names="queueserver1offlinetext" />
+        <rabbit:listener ref="revokeListener" method="receiveMessage" queue-names="queueserver1revoketext" />
+    </rabbit:listener-container>
+
+</beans>

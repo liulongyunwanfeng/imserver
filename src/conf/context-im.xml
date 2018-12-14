@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="groupacceptDao" class="com.eplat.im.dao.GroupacceptDao" scope="prototype"/>	
+	<bean id="groupsendDao" class="com.eplat.im.dao.GroupsendDao" scope="prototype"/>	
+	<bean id="messageacceptDao" class="com.eplat.im.dao.MessageacceptDao" scope="prototype"/>	
+	<bean id="messagesendDao" class="com.eplat.im.dao.MessagesendDao" scope="prototype"/>
+
+	<bean id="groupMemberDao" class="com.eplat.im.dao.GroupMemberDao" scope="prototype"/>
+	<bean id="userHeadImgDao" class="com.eplat.im.dao.UserHeadImgDao" />
+
+	<bean id="groupMemeber" class="com.eplat.im.DefaultGroupMemeber" scope="prototype">
+		<property name="groupMemberDao">
+			<ref bean="groupMemberDao" />
+		</property>
+	</bean>
+
+
+
+
+	<bean id="groupacceptService" class="com.eplat.im.service.GroupacceptService" scope="prototype">
+		<property name="groupacceptDao">
+			<ref bean="groupacceptDao" />
+		</property>		
+	</bean>
+
+	<bean id="groupsendService" class="com.eplat.im.service.GroupsendService" scope="prototype">
+		<property name="groupsendDao">
+			<ref bean="groupsendDao" />
+		</property>		
+	</bean>	
+	<bean id="messageacceptService" class="com.eplat.im.service.MessageacceptService" scope="prototype">
+		<property name="messageacceptDao">
+			<ref bean="messageacceptDao" />
+		</property>		
+	</bean>	
+	<bean id="messagesendService" class="com.eplat.im.service.MessagesendService" scope="prototype">
+		<property name="messagesendDao">
+			<ref bean="messagesendDao" />
+		</property>		
+	</bean>
+
+
+
+</beans>

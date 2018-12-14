@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <title>Web Socket JavaScript Echo Client</title>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/sockjs.min.js"></script>
+  <script src="js/jquery.ws.js"></script>
+  <script language="javascript" type="text/javascript">
+    var flag="";
+
+
+    $(document).ready(function() {
+    	flag=getUrlParam("flag");
+    	if(getUrlParam("clienttype")){
+            clienttype=getUrlParam("clienttype");
+        }
+
+    	if (flag=="1"){
+            userid="-7806343473853479463";
+    		username="杨斌";
+            imToken = '-7806343473853479463';
+    	} else {
+    		userid="5604596590712865886";
+    		username="潘仁海";
+            imToken = '5604596590712865886';
+    	}
+         init();
+     });
+    /**
+     * 获取html的参数
+     */
+    function getUrlParam(name){
+    	nk="";
+    	var reg=new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+    	var r=window.location.search.substr(1).match(reg);
+    	if (r!=null) return unescape(r[2]);return nk;
+    };
+    function send_echo(){
+    	if (flag=="1"){
+            userid="-7806343473853479463";
+            username="杨斌";
+            imToken = '-7806343473853479463';
+
+            sendMessage($("#textID").val(),"5604596590712865886","潘仁海");
+            // sendGroupMessage($("#textID").val(),"-4292545888477755187","党委部门群");
+    	} else {
+            userid="5604596590712865886";
+            username="潘仁海";
+            imToken = '5604596590712865886';
+    		sendMessage($("#textID").val(),"-7806343473853479463","杨斌");
+            // sendGroupMessage($("#textID").val(),"-4292545888477755187","党委部门群");
+    	}
+    }
+  </script>
+</head>
+<body>
+<h1>Echo Server</h1>
+<div style="text-align: left;">
+  <form action="">
+    <input onclick="send_echo()" value="发送socket请求" type="button">
+    <input id="textID" name="message" value="Hello World, Web Sockets" type="text">
+    <br>
+    <input onclick="closeSocket()" value="断开socket" type="button">
+    <input onclick="revokeMsg()" value="撤回消息测试" type="button">
+    <input id="lastsendMsgId" />
+
+  </form>
+</div>
+<div id="output"></div>
+</body>
+</html>

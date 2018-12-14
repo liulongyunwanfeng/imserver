@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqls>
+	<sql id="client.login"><![CDATA[select PERSON_ID USER_ID,PERSON_NAME,PHONE,HEAD_URL,BIRTH_DATE,ADDR,PWD,GENDER
+ 							from WX_PERSON where PHONE='{?uid}']]></sql>
+ 	
+</sqls>

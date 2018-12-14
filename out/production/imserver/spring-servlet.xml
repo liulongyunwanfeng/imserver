@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:websocket="http://www.springframework.org/schema/websocket"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/websocket
+http://www.springframework.org/schema/websocket/spring-websocket.xsd">
+  <websocket:handlers allowed-origins="*">
+      <websocket:mapping path="/springws/websocket.ws" handler="websocketHandler"/>
+       <websocket:handshake-interceptors>
+          <bean class="com.eplat.im.HandshakeInterceptor"/>
+      </websocket:handshake-interceptors>
+
+
+  </websocket:handlers>
+ <websocket:handlers allowed-origins="*">
+      <websocket:mapping path="/websocket" handler="websocketHandler"/>
+       <websocket:handshake-interceptors>
+          <bean class="com.eplat.im.HandshakeInterceptor"/>
+      </websocket:handshake-interceptors>
+	<websocket:sockjs/>
+  </websocket:handlers>
+  <bean id="websocketHandler" class="com.eplat.im.WebsocketHandler"/>
+	
+	
+	<bean id="ajaxAction" class="com.eplat.web.actions.AjaxAction"></bean>
+	<bean id="fileAction" class="com.eplat.web.actions.FileAction">
+		<property name="storeMaps">
+			<map>
+				<entry key="image" value-ref="fileimg" /> 
+				<entry key="video" value-ref="filevideo"/>
+				<entry key="default" value-ref="default"/>
+			</map>
+		</property>
+	</bean>
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8"/>  
+		<property name="maxInMemorySize" value="40960"/>
+		<property name="maxUploadSize" value="3000000" />
+	</bean>  
+	<!--文件存储位置配置-->
+	<bean id="default" class="com.eplat.web.actions.StoreBean">
+		<property name="storeId" value="default"/>  
+		<property name="path" value="absolute:c:/test/"/> 
+		<property name="maxFileSize" value="5120"/> 
+		<property name="rename" value="guid"/> 
+		<property name="imageFlag" value="0"/> 
+	</bean>
+	<!--文件存储位置配置-->
+	<bean id="fileimg" class="com.eplat.web.actions.StoreBean">
+		<property name="storeId" value="image"/>  
+		<property name="path" value="/upload/image/"/> 
+		<property name="maxFileSize" value="5120"/> 
+		<property name="rename" value="guid"/> 
+		<property name="imageFlag" value="1"/> 
+	</bean>
+	<!--视频文件存储-->
+	<bean id="filevideo" class="com.eplat.web.actions.StoreBean">
+		<property name="storeId" value="video"/>  
+		<property name="path" value="absolute:d:/test/"/> 
+		<property name="maxFileSize" value="5120000"/> 
+		<property name="rename" value="src_guid"/> 
+		<property name="imageFlag" value="0"/>
+	</bean>
+	 
+  
+</beans>
+	
