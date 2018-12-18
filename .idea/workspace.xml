@@ -7,28 +7,324 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="333f23ac-addc-4b82-9cdb-d2ae653b0bf3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/eplat/utils/ConfigUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/GroupMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/GroupMessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/MessageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/MessageConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/RevokeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/RevokeListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/WebsocketHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/WebsocketHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/context-rabbitmq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/context-rabbitmq.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/echo.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/echo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/jquery.ws.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/jquery.ws.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/logs/imserver.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/logs/imserver.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/GroupMessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/GroupMessageListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/MessageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/MessageConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/RevokeListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/RevokeListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/WebsocketHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/WebsocketHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imserver/conf/context-rabbitmq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/conf/context-rabbitmq.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/TestRedis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/ThreadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/OffLineMessageListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/annotation/EntityBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/annotation/FieldInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/annotation/TableInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/annotation/TestAnno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/BizService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/EntityCauseBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/EplatConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/EplatInitServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/IBizService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/core/ValueObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/AbstractDBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/BindParamUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ColumnBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/Configuration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ConfigurationUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ConnectionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ConnectionType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/DBConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/DBConnections.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/DBException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/DataBaseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/InOutFlag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/JdbcDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/MySqlConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/OracleConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ParamEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/PostgreSQLConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/ProxoolDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/Sql2005Connection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/SqlConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/WriteBlob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/WriteClob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/dao/AbstractBaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/dao/BaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/rowset/DataConvert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/rowset/DataRow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/rowset/DataRowSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/rowset/DataRowSets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/sql/OldSqlServerQueryType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/db/sql/SqlServerQueryType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/ClientBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/CommonConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/DefaultGroupMemeber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/GroupMessageListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/HandshakeInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/IGroupMemeber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/IoSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/MessageConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/MessageListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/MessageType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/ResponseTextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/RevokeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/WebsocketHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/GroupMemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/GroupacceptDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/GroupsendDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/MessageacceptDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/MessagesendDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/dao/UserHeadImgDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/GroupacceptBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/GroupsendBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/ImPacket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/ImuserGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/ImuserGroupKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/domain/MessagesendBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/service/GroupacceptService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/service/GroupsendService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/service/MessageacceptService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/im/service/MessagesendService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/AES.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/Base64.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/BeanUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/ChineseUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/DataFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/DateTimeUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/FileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/HanziDecoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/ImageRemarkUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/LoggerUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/Md5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/ParsePkParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/PropertysUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/RedisUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/ResourceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/SHA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/SpringManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/StringUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/ZipFileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/utils/cos/CosFileRename.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/EmailRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/IntRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/LengthRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/MaxRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/MinLengthRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/MinRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/NotNullRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/NumberRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/ValidateRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/validate/ValidateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/actions/AjaxAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/actions/BaseAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/actions/FileAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/actions/PermissionsfilterBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/actions/StoreBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/ajax/AjaxResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/springmvc/MessageResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/springmvc/RichFreeMarkerView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/com/eplat/web/springmvc/RichFreeMarkerViewResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/context-im.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/context-rabbitmq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/redis.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/conf/sqls.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/db_connection_default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/hanzi_to_pinyin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/AbstractJSON$CycleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/AbstractJSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONArray$JSONArrayListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONFunction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONNull.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONSerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JSONString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/JsonConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/AndPropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/CompositePropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/FalsePropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/MappingPropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/NotPropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/OrPropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/filters/TruePropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/DefaultDefaultValueProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/DefaultValueProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/DefaultValueProcessorMatcher$DefaultDefaultValueProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/DefaultValueProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsDateJsonBeanProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsDateJsonValueProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonBeanProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonBeanProcessorMatcher$DefaultJsonBeanProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonBeanProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonBigDecimalToStringProcessorImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonDateToStringProcessorImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonRowsetToStringProcessorImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonValueProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonValueProcessorMatcher$DefaultJsonValueProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonValueProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/JsonVerifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/PropertyNameProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/PropertyNameProcessorMatcher$DefaultPropertyNameProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/processors/PropertyNameProcessorMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/regexp/JdkRegexpMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/regexp/Perl5RegexpMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/regexp/RegexpMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/regexp/RegexpUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/CycleDetectionStrategy$LenientCycleDetectionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/CycleDetectionStrategy$LenientNoRefCycleDetectionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/CycleDetectionStrategy$StrictCycleDetectionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/CycleDetectionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/EnumMorpher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JSONBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JSONStringer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JSONTokener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JSONUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer$CamelCaseJavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer$NoopJavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer$StrictJavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer$UnderscoreJavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer$WhiteSpaceJavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JavaIdentifierTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/JsonEventListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/NewBeanInstanceStrategy$DefaultNewBeanInstanceStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/NewBeanInstanceStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/PropertyExclusionClassMatcher$DefaultPropertyExclusionClassMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/PropertyExclusionClassMatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/PropertyFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/PropertySetStrategy$DefaultPropertySetStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/PropertySetStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/WebHijackPreventionStrategy$CommentWebHijackPreventionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/WebHijackPreventionStrategy$InfiniteLoopWebHijackPreventionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/WebHijackPreventionStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/util/WebUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/xml/JSONTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/xml/XMLSerializer$CustomElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/xml/XMLSerializer$XomSerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/net/sf/json/xml/XMLSerializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/org/springframework/web/multipart/cos/CosMultipartHttpServletRequest$CosMultipartFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/org/springframework/web/multipart/cos/CosMultipartHttpServletRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/org/springframework/web/multipart/cos/CosMultipartResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/org/springframework/web/multipart/cos/ServerFilenameUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/pinyin_to_cizu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/classes/spring-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/JBarcode.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/amqp-client-4.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/ant.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/asm-5.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/aspectjweaver-1.6.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/bsh.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-beanutils-1.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-codec-1.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-collections-3.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-collections4-4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-dbcp2-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-digester.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-discovery-0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-fileupload-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-io-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-lang-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-pool2-2.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/commons-validator-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/curvesapi-1.04.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-core-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-bindings-soap-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-bindings-xml-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-databinding-jaxb-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-frontend-jaxrs-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-frontend-jaxws-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-frontend-simple-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-rs-client-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-transports-http-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-transports-http-jetty-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/cxf-rt-wsdl-3.1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/druid-1.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/ezmorph-1.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/freemarker.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/htmlparser-1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/httpclient-4.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/httpclient-cache-4.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/httpcore-4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/httpmime-4.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/iText-2.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/iTextAsian.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jackson-annotations-2.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jackson-core-2.4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jackson-core-2.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jackson-databind-2.4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jackson-databind-2.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jacob.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jakarta-oro-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/java_memcached-release_2.6.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jaxen-1.1.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jaxrpc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jcommon-1.0.16.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jdom-2.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jedis-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jmockit-1.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/json-lib-2.4-jdk15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/json.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/json_simple-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jsoup-1.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/jtds-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/metrics-core-3.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.40.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/netty-all-4.0.25.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/ojdbc14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/poi-3.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/proxool-0.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/quartz-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/serializer-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/slf4j-simple-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-amqp-1.6.0.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-aop-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-aspects-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-beans-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-context-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-context-support-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-core-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-data-commons-1.13.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-data-keyvalue-1.2.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-data-redis-1.8.7.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-expression-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-messaging-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-rabbit-1.5.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-retry-1.1.2.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-tx-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-web-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-webmvc-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/spring-websocket-4.3.8.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/sqlitejdbc-v054.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/sqljdbc4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/ueditor-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/velocity-1.6.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/wsdl4j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xalan-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xercesImpl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xml-apis.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xmlbeans-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xom-1.2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/lib/xstream-1.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/echo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/jquery-1.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/jquery.websocket.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/jquery.ws.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/js/sockjs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/logs/imserver.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/CommonConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/MessageConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/MessageListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/imserver/com/eplat/im/MessageListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/eplat/im/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/eplat/im/RevokeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/RevokeListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conf/context-rabbitmq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/conf/context-rabbitmq.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/echo.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/echo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery.ws.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/jquery.ws.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,8 +452,9 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="html" value="6" />
-          <entry key="java" value="44" />
+          <entry key="java" value="45" />
           <entry key="js" value="4" />
+          <entry key="properties" value="1" />
           <entry key="xml" value="10" />
         </counts>
       </usages-collector>
@@ -165,24 +462,27 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="HTML" value="6" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="45" />
           <entry key="JavaScript" value="4" />
+          <entry key="Properties" value="1" />
           <entry key="XML" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="11" />
-          <entry key="java" value="1021" />
+          <entry key="java" value="1110" />
           <entry key="js" value="113" />
+          <entry key="properties" value="21" />
           <entry key="xml" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="1021" />
+          <entry key="JAVA" value="1110" />
           <entry key="JavaScript" value="113" />
+          <entry key="Properties" value="21" />
           <entry key="XML" value="72" />
         </counts>
       </usages-collector>
@@ -225,8 +525,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264">
-              <caret line="295" selection-start-line="295" selection-end-line="295" />
+            <state relative-caret-position="91">
+              <caret line="262" column="62" lean-forward="true" selection-start-line="262" selection-start-column="62" selection-end-line="262" selection-end-column="62" />
               <folding>
                 <element signature="docComment;class#WebsocketHandler#0" />
                 <element signature="docComment;method#afterConnectionClosed#0;class#WebsocketHandler#0" />
@@ -248,54 +548,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="46" column="46" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/conf/context-rabbitmq.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="47" column="102" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="102" />
+            <state relative-caret-position="204">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/eplat/im/MessageListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-              <folding>
-                <element signature="docComment;class#MessageListener#0" />
-                <element signature="docComment;method#writeMessageToRedis#0;class#MessageListener#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="178" column="64" selection-start-line="178" selection-start-column="54" selection-end-line="178" selection-end-column="64" />
-              <folding>
-                <element signature="docComment;class#GroupMessageListener#0" />
-                <element signature="docComment;method#writeGroupSend#0;class#GroupMessageListener#0" />
-                <element signature="method#writeGroupSend#0;class#GroupMessageListener#0" />
-                <element signature="method#writeGroupAccept#0;class#GroupMessageListener#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+            <state relative-caret-position="308">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="14" selection-start-line="2" selection-end-line="2" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/eplat/utils/ConfigUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -312,7 +593,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TEXT_HAS_SEND</find>
       <find>发出消息回执</find>
       <find>消息发送成功</find>
       <find>login</find>
@@ -342,6 +622,7 @@
       <find>收到消息查看报告========================</find>
       <find>&quot;IM_MSG_&quot;</find>
       <find>消息监听收到消息</find>
+      <find>server1</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -375,16 +656,18 @@
         <option value="$PROJECT_DIR$/src/com/eplat/im/HandshakeInterceptor.java" />
         <option value="$PROJECT_DIR$/src/com/eplat/im/MessageType.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java" />
         <option value="$PROJECT_DIR$/src/com/eplat/im/ResponseTextListener.java" />
         <option value="$PROJECT_DIR$/src/conf/context-rabbitmq.xml" />
         <option value="$PROJECT_DIR$/src/com/eplat/im/RevokeListener.java" />
         <option value="$PROJECT_DIR$/web/js/jquery.ws.js" />
         <option value="$PROJECT_DIR$/web/echo.html" />
-        <option value="$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java" />
-        <option value="$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java" />
         <option value="$PROJECT_DIR$/src/com/eplat/im/MessageListener.java" />
+        <option value="$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java" />
+        <option value="$PROJECT_DIR$/src/config.properties" />
+        <option value="$PROJECT_DIR$/src/com/eplat/utils/ConfigUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java" />
       </list>
     </option>
   </component>
@@ -427,36 +710,6 @@
               <item name="imserver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="imserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="eplat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="eplat" type="462c0819:PsiDirectoryNode" />
-              <item name="im" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imserver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imserver" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="imserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="imserver" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -473,10 +726,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/out/artifacts/imserver_war_exploded/logs/imserver.log" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544784609865" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545131046238" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.7" />
-    <property name="last_opened_file_path" value="F:/svnimserver" />
+    <property name="last_opened_file_path" value="E:/websocketcloudtest2/imserver" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -486,6 +739,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.eplat.utils" />
       <recent name="com.eplat.im" />
       <recent name="com.eplat.im.dao" />
     </key>
@@ -694,7 +948,7 @@
       <workItem from="1544685334577" duration="5166000" />
       <workItem from="1544750182241" duration="21328000" />
       <workItem from="1545019050287" duration="16144000" />
-      <workItem from="1545124567190" duration="3205000" />
+      <workItem from="1545124567190" duration="6607000" />
     </task>
     <task id="LOCAL-00001" summary="初始导入">
       <created>1533791230476</created>
@@ -969,11 +1223,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544609691135</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="提交更新">
+      <created>1545128104255</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1545128104255</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="964415000" />
+    <option name="totallyTimeSpent" value="967817000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -987,7 +1248,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49828178" weight="0.2624811" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.35325265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -998,7 +1259,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.087027915" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.13300492" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35303777" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22167487" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.58784896" />
@@ -1006,7 +1267,7 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.0" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.58949095" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.54351395" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.42528737" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32840723" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.23606557" />
@@ -1021,7 +1282,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.2624811" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49828178" visible="true" weight="0.35325265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1032,7 +1293,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.087027915" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.13300492" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.087027915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.58784896" />
@@ -1123,20 +1384,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestRedis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eplat/validate/MaxRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1457,17 +1704,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+        <state relative-caret-position="170">
+          <caret line="64" column="60" lean-forward="true" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
+          <folding>
+            <element signature="docComment;class#GroupMessageListener#0" />
+            <element signature="docComment;method#writeGroupSend#0;class#GroupMessageListener#0" />
+            <element signature="method#writeGroupSend#0;class#GroupMessageListener#0" />
+            <element signature="method#writeGroupAccept#0;class#GroupMessageListener#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eplat/im/WebsocketHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        <state relative-caret-position="91">
+          <caret line="262" column="62" lean-forward="true" selection-start-line="262" selection-start-column="62" selection-end-line="262" selection-end-column="62" />
           <folding>
             <element signature="docComment;class#WebsocketHandler#0" />
             <element signature="docComment;method#afterConnectionClosed#0;class#WebsocketHandler#0" />
@@ -1485,41 +1738,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/MessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;class#MessageListener#0" />
+            <element signature="docComment;method#writeMessageToRedis#0;class#MessageListener#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/conf/context-rabbitmq.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="755">
           <caret line="47" column="102" selection-start-line="47" selection-start-column="84" selection-end-line="47" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eplat/utils/ConfigUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eplat/im/MessageConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="46" />
+        <state relative-caret-position="204">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/GroupMessageListener.java">
+    <entry file="file://$PROJECT_DIR$/src/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="178" column="64" selection-start-line="178" selection-start-column="54" selection-end-line="178" selection-end-column="64" />
-          <folding>
-            <element signature="docComment;class#GroupMessageListener#0" />
-            <element signature="docComment;method#writeGroupSend#0;class#GroupMessageListener#0" />
-            <element signature="method#writeGroupSend#0;class#GroupMessageListener#0" />
-            <element signature="method#writeGroupAccept#0;class#GroupMessageListener#0" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/MessageListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/eplat/im/CommonConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-          <folding>
-            <element signature="docComment;class#MessageListener#0" />
-            <element signature="docComment;method#writeMessageToRedis#0;class#MessageListener#0" />
-          </folding>
+        <state relative-caret-position="308">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>

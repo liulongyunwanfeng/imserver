@@ -1,5 +1,7 @@
 package com.eplat.im;
 
+import com.eplat.utils.ConfigUtils;
+
 /**
  * Created by liulongyun on 2018/7/26.
  */
@@ -74,14 +76,7 @@ public class CommonConstants {
 
 
 
-
-
-
-
-
-
-
-
+    public  static final String CURRENT_SERVER = ConfigUtils.getValue("CURRENT_SERVER");
 
 
 }

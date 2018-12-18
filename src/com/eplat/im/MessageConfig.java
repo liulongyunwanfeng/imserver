@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class MessageConfig {
 	// 当前服务器
-	public static String currentServer = "server1";
+	public static String currentServer = CommonConstants.CURRENT_SERVER;
 	public static ConcurrentHashMap<String, WebSocketSession> machineList = new ConcurrentHashMap<String, WebSocketSession>();
 	public static ConcurrentHashMap<String, WebSocketSession> mobileList = new ConcurrentHashMap<String, WebSocketSession>();
 	
