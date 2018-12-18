@@ -2,6 +2,7 @@ package com.eplat.im;
 
 import com.eplat.utils.RedisUtils;
 import com.eplat.utils.SpringManager;
+import org.springframework.amqp.AmqpException;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.web.socket.WebSocketSession;
 
@@ -55,7 +56,11 @@ public class MessageConfig {
 	 */
 	public static void sendResponseToMQ(String serverFlag,String content) {
 		AmqpTemplate amqpTemplate = (AmqpTemplate) SpringManager.getService("amqpTemplate");
-		amqpTemplate.convertAndSend(serverFlag, content);
+		try {
+			amqpTemplate.convertAndSend(serverFlag, content);
+		} catch (AmqpException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

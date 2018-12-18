@@ -9,7 +9,9 @@ import com.eplat.im.dao.MessagesendDao;
 import com.eplat.im.domain.GroupacceptBean;
 import com.eplat.im.domain.GroupsendBean;
 import com.eplat.im.domain.MessagesendBean;
+import com.eplat.utils.RedisUtils;
 import com.eplat.utils.SpringManager;
+import com.eplat.utils.StringUtils;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 import org.springframework.web.socket.TextMessage;
@@ -45,9 +47,15 @@ public class RevokeListener {
 			JSONObject revokeMsgJsonObj = JSONObject.fromObject(msg);
 
 			boolean isRevokeMsgLegal =  isRevokeMsgLegal(revokeMsgJsonObj);
+			/**
+			 * 如果撤回的消息是群聊消息是公用一个撤回消息队列，业务逻辑判断之后会加一个标识hasFindServer,
+			 * 再重新放回撤回队列里处理。下一次就会想处理单聊撤回一样处理
+			 */
+			Object hasFindServer = revokeMsgJsonObj.get("hasFindServer");
+
 			if(isRevokeMsgLegal){
 				String revokemsgtype = (String)revokeMsgJsonObj.get("revokemsgtype");
-				if(CommonConstants.IM_BUSINESSTYPE_GROUPPOINTTOPOINT.equals(revokemsgtype)){
+				if(CommonConstants.IM_BUSINESSTYPE_GROUPPOINTTOPOINT.equals(revokemsgtype)&&hasFindServer==null){
 					//执行群消息撤回逻辑
 					revokeGroupMsg(revokeMsgJsonObj);
 				}else{
@@ -86,7 +94,6 @@ public class RevokeListener {
 			MessageacceptDao messageacceptDao = (MessageacceptDao) SpringManager.getService("messageacceptDao");
 			messageacceptDao.setDBConnection(connection);
 			List<MessagesendBean> acceptMsgs =  messageacceptDao.queryByCause("AND MESSAGE_ID = ? AND TO_ID=?",queryParams);
-
 
 			for (int i = 0; i < acceptMsgs.size(); i++) {
 				if(fromid.equals(acceptMsgs.get(i).getFromid())){//判断是否是发送人本身
@@ -159,30 +166,11 @@ public class RevokeListener {
 			String fromid = (String)revokeMsgJsonObj.get("fromid");
 			String toid = (String)revokeMsgJsonObj.get("toid");
 			String[] queryParams = {messageid,toid};
-			//当PC端后手机都不在线是直接插入数据库
+
+
 			connection = ConnectionManager.getNoThreadConnection("default");
 			connection.beginTrans();
-
-			GroupacceptDao groupacceptdao = (GroupacceptDao) SpringManager.getService("GroupacceptDao");
-			groupacceptdao.setDBConnection(connection);
-			List<GroupacceptBean> groupacceptmsgs =  groupacceptdao.queryByCause("AND GROUP_MSG_ID = ? AND TO_GROUP_ID=?",queryParams);
-
-			for (int i = 0; i < groupacceptmsgs.size(); i++) {
-				if(fromid.equals(groupacceptmsgs.get(i).getFromid())){//判断是否是发送人本身
-					if(System.currentTimeMillis()-groupacceptmsgs.get(i).getSenddate().getTime()<CommonConstants.REVOKE_TIME){
-						JSONObject content = JSONObject.fromObject(groupacceptmsgs.get(i).getContent());
-						JSONObject viewContent = (JSONObject)content.get("viewContent");
-						viewContent.put("content",groupacceptmsgs.get(i).getFromname()+"撤回了一条信息");
-						viewContent.put("viewType",CommonConstants.MSG_VIEW_TYPE_SERVICESYSTEM);
-						content.put("viewContent",viewContent);
-						groupacceptmsgs.get(i).setContent(content.toString());
-						//更新消息接收表
-						groupacceptdao.update(groupacceptmsgs.get(i));
-					}
-
-				}
-			}
-
+			//更新发送表
 			GroupsendDao groupsenddao = (GroupsendDao) SpringManager.getService("GroupsendDao");
 			groupsenddao.setDBConnection(connection);
 			List<GroupsendBean> groupsendmsgs =  groupsenddao.queryByCause("AND GROUP_MSG_ID = ? AND TO_GROUP_ID=?",queryParams);
@@ -196,16 +184,80 @@ public class RevokeListener {
 						viewContent.put("viewType",CommonConstants.MSG_VIEW_TYPE_SERVICESYSTEM);
 						content.put("viewContent",viewContent);
 						groupsendmsgs.get(i).setContent(content.toString());
-						//更新消息接收表
+						//更新消息发送表
 						groupsenddao.update(groupsendmsgs.get(i));
+
 					}
 
 				}
 			}
+
+			//接收表
+			GroupacceptDao groupacceptdao = (GroupacceptDao) SpringManager.getService("GroupacceptDao");
+			groupacceptdao.setDBConnection(connection);
+			List<GroupacceptBean> groupacceptmsgs =  groupacceptdao.queryByCause("AND GROUP_MSG_ID = ? AND TO_GROUP_ID=?",queryParams);
+
+			for (int i = 0; i < groupacceptmsgs.size(); i++) {
+				if(fromid.equals(groupacceptmsgs.get(i).getFromid())){//判断是否是发送人本身
+					if(System.currentTimeMillis()-groupacceptmsgs.get(i).getSenddate().getTime()<CommonConstants.REVOKE_TIME){
+						JSONObject content = JSONObject.fromObject(groupacceptmsgs.get(i).getContent());
+						JSONObject viewContent = (JSONObject)content.get("viewContent");
+						viewContent.put("content",groupacceptmsgs.get(i).getFromname()+"撤回了一条信息");
+						viewContent.put("viewType",CommonConstants.MSG_VIEW_TYPE_SERVICESYSTEM);
+						content.put("viewContent",viewContent);
+						groupacceptmsgs.get(i).setContent(content.toString());
+
+
+
+
+						//revokeMsgJsonObj加个标识再一次丢到队列里去
+						revokeMsgJsonObj.put("hasFindServer",true);
+
+						String pcFlag = null;
+						String mobileFlag = null;
+						try {
+							pcFlag = MessageConfig.getServer(groupacceptmsgs.get(i).getToid(), "pc");
+							mobileFlag = MessageConfig.getServer(groupacceptmsgs.get(i).getToid(), "mobile");
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+
+						if (StringUtils.hasLength(pcFlag)&& StringUtils.hasLength(mobileFlag)) {// 手机和电脑都在线
+							revokeMsgJsonObj.put("clienttype", "pc");
+							MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, revokeMsgJsonObj.toString());
+							revokeMsgJsonObj.put("clienttype", "mobile");
+							MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, revokeMsgJsonObj.toString());
+
+						} else if (!StringUtils.hasLength(pcFlag)&& StringUtils.hasLength(mobileFlag)) {// 手机在线，电脑不在线
+							logger.info("接受者手机端在线===================");
+							revokeMsgJsonObj.put("clienttype", "mobile");
+							logger.info("放入mq===================");
+							MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, revokeMsgJsonObj.toString());
+						} else if (StringUtils.hasLength(pcFlag)&& !StringUtils.hasLength(mobileFlag)) {// 手机不在线，电脑在线
+							revokeMsgJsonObj.put("clienttype", "pc");
+							MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, revokeMsgJsonObj.toString());
+						}
+
+					}
+
+				}
+			}
+
+
+			if(groupacceptmsgs.size()>0){
+				//执行批量更新消息接收表
+				groupacceptdao.updateBatch(groupacceptmsgs);
+
+			}
+
 			connection.commit();
 
 			WebSocketSession pcsession=MessageConfig.getSession(toid,CommonConstants.IM_CLIENT_TYPE_PC);
 			WebSocketSession mobilesession=MessageConfig.getSession(toid,CommonConstants.IM_CLIENT_TYPE_MOBILE);
+
+
+
+
 			if(pcsession!=null){
 				pcsession.sendMessage(new TextMessage(revokeMsgJsonObj.toString()));
 

@@ -14,7 +14,7 @@
     <rabbit:queue id="queueserver1ptpmsg" name="queueserver1ptpmsg" durable="true" auto-delete="false" exclusive="false" />
     <rabbit:queue id="queuegroup" name="queuegroup" durable="true" auto-delete="false" exclusive="false" />
     <rabbit:queue id="queueserver1resptext" name="queueserver1resptext" durable="true" auto-delete="false" exclusive="false" />
-    <rabbit:queue id="queueserver1offlinetext" name="queueserver1offlinetext" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue id="queueofflinetext" name="queueofflinetext" durable="true" auto-delete="false" exclusive="false" />
     <rabbit:queue id="queueserver1revoketext" name="queueserver1revoketext" durable="true" auto-delete="false" exclusive="false" />
 
 
@@ -25,7 +25,7 @@
             <rabbit:binding queue="queueserver1ptpmsg" key="server1ptpmsg"/>
             <rabbit:binding queue="queuegroup" key="group"/>
             <rabbit:binding queue="queueserver1resptext" key="server1resptext"/>
-            <rabbit:binding queue="queueserver1offlinetext" key="server1offlinetext"/>
+            <rabbit:binding queue="queueofflinetext" key="queueofflinetext"/>
             <rabbit:binding queue="queueserver1revoketext" key="server1revoketext"/>
         </rabbit:bindings>
     </rabbit:direct-exchange>
@@ -48,7 +48,7 @@
         <rabbit:listener ref="messageListener" method="receiveMessage" queue-names="queueserver1ptpmsg" />
         <rabbit:listener ref="groupmessageListener" method="receiveMessage" queue-names="queuegroup" />
         <rabbit:listener ref="responseTextListener" method="receiveMessage" queue-names="queueserver1resptext" />
-        <rabbit:listener ref="offLineMessageListener" method="receiveMessage" queue-names="queueserver1offlinetext" />
+        <rabbit:listener ref="offLineMessageListener" method="receiveMessage" queue-names="queueofflinetext" />
         <rabbit:listener ref="revokeListener" method="receiveMessage" queue-names="queueserver1revoketext" />
     </rabbit:listener-container>
 

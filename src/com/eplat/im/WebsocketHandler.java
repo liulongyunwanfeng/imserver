@@ -195,8 +195,7 @@ public class WebsocketHandler extends TextWebSocketHandler {
 			}
 
 			session.sendMessage(new TextMessage(jo1.toString()));
-
-//			MessageConfig.addSession(jo.getString("userid"),jo.getString("clienttype"), session);
+			MessageConfig.addSession(jo.getString("userid"),jo.getString("clienttype"), session);
 
 
 
@@ -293,9 +292,13 @@ public class WebsocketHandler extends TextWebSocketHandler {
 			}
             logger.info("进入发送群消息发送逻辑=================获取发送人头像成功");
 
-			MessageConfig.sendGroupToMQ(jo.toString());
+			try {
+				MessageConfig.sendGroupToMQ(jo.toString());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
-           logger.info("================放入mq成功开始写回执=================");
+			logger.info("================放入mq成功开始写回执=================");
 			//给个消息已发送回执------add by lly
 			JSONObject mesHasSendInfo = new JSONObject();
 			mesHasSendInfo.put("messageid",jo.getString("messageid"));
@@ -357,18 +360,18 @@ public class WebsocketHandler extends TextWebSocketHandler {
 
 			if (StringUtils.hasLength(pcFlag)&& StringUtils.hasLength(mobileFlag)) {// 手机和电脑都在线
 				jo.put("clienttype", "pc");
-				MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_RESPTEXT, jo.toString());
+				MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, jo.toString());
 				jo.put("clienttype", "mobile");
-				MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_RESPTEXT, jo.toString());
+				MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, jo.toString());
 
 			} else if (!StringUtils.hasLength(pcFlag)&& StringUtils.hasLength(mobileFlag)) {// 手机在线，电脑不在线
 				logger.info("接受者手机端在线===================");
 				jo.put("clienttype", "mobile");
 				logger.info("放入mq===================");
-				MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_RESPTEXT, jo.toString());
+				MessageConfig.sendRevokeMsgToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, jo.toString());
 			} else if (StringUtils.hasLength(pcFlag)&& !StringUtils.hasLength(mobileFlag)) {// 手机不在线，电脑在线
 				jo.put("clienttype", "pc");
-				MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_RESPTEXT, jo.toString());
+				MessageConfig.sendRevokeMsgToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_REVOKETEXT, jo.toString());
 			}
 
 
@@ -444,9 +447,9 @@ public class WebsocketHandler extends TextWebSocketHandler {
 			if (StringUtils.hasLength(pcFlag)
 					&& StringUtils.hasLength(mobileFlag)) {// 手机和电脑都在线
 				jo.put("clienttype", "pc");
-				MessageConfig.sendToMQ(pcFlag+"ptpmsg", jo.toString());
+				MessageConfig.sendToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo.toString());
 				jo.put("clienttype", "mobile");
-				MessageConfig.sendToMQ(mobileFlag+"ptpmsg", jo.toString());
+				MessageConfig.sendToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo.toString());
 
 
 			} else if (!StringUtils.hasLength(pcFlag)&& StringUtils.hasLength(mobileFlag)) {// 手机在线，电脑不在线
@@ -456,14 +459,14 @@ public class WebsocketHandler extends TextWebSocketHandler {
 
 				jo.put("clienttype", "mobile");
 				logger.info("放入mq===================");
-				MessageConfig.sendToMQ(mobileFlag+"ptpmsg", jo.toString());
+				MessageConfig.sendToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo.toString());
 				logger.info("放入mq成功===================");
 			} else if (StringUtils.hasLength(pcFlag)
 					&& !StringUtils.hasLength(mobileFlag)) {// 手机不在线，电脑在线
 				jo.put("clienttype", "mobile");
 				RedisUtils.setMap(toid + "_mobile", jo.getString("messageid"),jo.toString());
 				jo.put("clienttype", "pc");
-				MessageConfig.sendToMQ(pcFlag+"ptpmsg", jo.toString());
+				MessageConfig.sendToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo.toString());
 			} else {// 手机和电脑不在线
 				logger.info("手机和电脑都不在线=============");
                 try {

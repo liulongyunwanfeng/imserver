@@ -27,7 +27,7 @@ public class MessageListener {
 
 	public void receiveMessage(String msg) {
 
-		System.out.println("消息监听收到消息：==========="+msg);
+		System.out.println("MessageListener消息监听收到消息：==========="+msg);
 
 
 		DBConnection connection = null;

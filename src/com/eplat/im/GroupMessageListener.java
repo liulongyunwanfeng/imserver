@@ -55,6 +55,7 @@ public class GroupMessageListener {
 
 	public void receiveMessage(String msg) {
 		DBConnection connection = null;
+		logger.info("进入群消息监听器============================");
 		try {
 			JSONObject jo = JSONObject.fromObject(msg);
 			if (MessageType.GROUP_TXT.equalsIgnoreCase(jo
@@ -137,6 +138,8 @@ public class GroupMessageListener {
 
                         JSONObject jo1 = JSONObject.fromObject(groupacceptBean);
 						jo1.put("imheadimg",jo.get("imheadimg"));
+
+
 						String pcFlag = MessageConfig.getServer(userid, "pc");
 						String mobileFlag = MessageConfig.getServer(userid,"mobile");
 						acceptList.add(groupacceptBean);
@@ -147,19 +150,21 @@ public class GroupMessageListener {
 						jo1.remove("contentJsonObj");
 						//System.out.println(jo1.toString());
 
+						logger.info("群消息开检测群成员在那个服务器上进行消息发送============================");
+
 						if (StringUtils.hasLength(pcFlag)&&StringUtils.hasLength(mobileFlag)) {// 手机和电脑在线
 							jo1.put("clienttype", "pc");
-							MessageConfig.sendToMQ(pcFlag, jo1.toString());
+							MessageConfig.sendToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo1.toString());
 							jo1.put("clienttype", "mobile");
-							MessageConfig.sendToMQ(mobileFlag, jo1.toString());
+							MessageConfig.sendToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo1.toString());
 						} else if (StringUtils.hasLength(mobileFlag)&&!StringUtils.hasLength(pcFlag)) {// 手机在线,电脑不在线
 							jo1.put("clienttype", "mobile");
-							MessageConfig.sendToMQ(mobileFlag, jo1.toString());
+							MessageConfig.sendToMQ(mobileFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo1.toString());
 							jo1.put("clienttype", "pc");
 							RedisUtils.setMap(userid + "_pc",groupacceptBean.getGroupmsgid(), jo1.toString());
 						} else if (!StringUtils.hasLength(mobileFlag)&&StringUtils.hasLength(pcFlag)) {// 手机不在线,电脑在线
 							jo1.put("clienttype", "pc");
-							MessageConfig.sendToMQ(pcFlag, jo1.toString());
+							MessageConfig.sendToMQ(pcFlag+CommonConstants.QUEUE_SUFFIX_NAME_PTPMSG, jo1.toString());
 							jo1.put("clienttype", "mobile");
 							RedisUtils.setMap(userid + "_mobile",groupacceptBean.getGroupmsgid(), jo1.toString());
 						}  else {// 没有在线,直接放入Redis缓存中,手机端和移动端都放

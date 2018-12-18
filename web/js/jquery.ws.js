@@ -339,11 +339,23 @@ function revokeMsg(){
     obj.messageid= $("#lastsendMsgId").val();
     obj.messagetype="30";
     obj.clienttype=clienttype;
-    obj.fromid='-6671366879099045750';
-    obj.fromname='杨帅';
-    obj.toid='513447557479943818';
-    obj.toname='杨万志';
-    obj.revokemsgtype = 'pointtopoint';
+    var fromid="-7806343473853479463";
+    var fromname="杨斌";
+    var toid="5604596590712865886";
+    var toname="潘仁海";
+
+    if (flag=="2"){
+        toid="-7806343473853479463";
+        toname="杨斌";
+        fromid="5604596590712865886";
+        fromname="潘仁海";
+    }
+
+    obj.fromid=fromid;
+    obj.fromname=fromname;
+    obj.toid=toid;
+    obj.toname=toname;
+    obj.revokemsgtype = 'grouppointtopoint';
     websocket.send(JSON.stringify(obj));
 
 }
