@@ -23,6 +23,9 @@ import java.util.UUID;
 
 /**
  * 消息接收处理-----消费者
+ * 消息撤回mq监听器
+ *
+ *
  * 
  * @author Administrator
  *
